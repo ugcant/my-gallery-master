@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap');
+
+:root {
+    /* colors: */
+    --clr-primary: #FFFFFF;
+    --clr-secondary: #E5E5E5;
+    --clr-tertiary: #A9A9A9;
+  
+  /* font-weight: */
+    --fw-semi-bold: 600;
+    --fw-medium: 500;
+    --fw-bold: 700;
+  
+    /* font-family: */
+    --ff-base: 'Montserrat', sans-serif;
+  
+  }
+
+  /*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    3. Allow percentage-based heights in the application
+  */
+  html, body {
+    height: 100%;
+  }
+  /*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    6. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    7. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    8. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
+  /* general styling */
+  body {
+    display: flex;
+    flex-direction: column;
+
+    margin: 2em 1em 1.5em 1em;
+
+    min-height: 100vh;
+    
+    background: var(--clr-primary);
+
+    font-size: 1rem;
+    font-family: var(--ff-base);
+    font-weight: var(--fw-semi-bold);
+    text-align: center;
+  }
+
+  /* header part(user information) styling */
+  section:first-child {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: .5em;
+  }
+
+    ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: .75em;
+
+    margin-left: -2em;
+
+    list-style: none;
+  }
+
+  section:first-child img {
+    width: 7em;
+    border-radius: 16px;
+    margin-bottom: .5em;
+  }
+
+  li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: .5em .5em .5em .5em;
+    margin-bottom: 2.5em;
+
+    border-radius: 12px;
+    background: var(--clr-secondary);
+  }
+
+  li:first-child {
+    padding: .5em 1.25em .5em 1.25em;
+  }
+
+  /* hero part styling */
+  section:nth-child(2) {
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr; 
+    gap: .5em .5em; 
+    grid-template-areas: 
+      "box-1 box-2 box-2"
+      "box-3 box-3 box-4"
+      "box-5 box-6 box-4"; 
+
+    margin-bottom: 3em;
+  }
+
+  .box-1 {
+    grid-area: box-1;
+    background-image: url(/assets/img/photo1.png);
+    background-repeat: no-repeat;
+    background-size:cover; 
+    border-radius: 12px;  
+    width:100%;
+    height:0;
+    padding-top:100%;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;}
+  .box-2 { 
+    grid-area: box-2; 
+    background-image: url(/assets/img/photo2.png);
+    background-repeat: no-repeat;
+    background-size:cover; 
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;}
+  .box-3 { 
+    grid-area: box-3; 
+    background-image: url(/assets/img/photo3.png);
+    background-repeat: no-repeat;
+    background-size:cover; 
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;}
+  .box-4 { 
+    grid-area: box-4; 
+    background-image: url(/assets/img/photo_4.png);
+    background-repeat: no-repeat;
+    background-size:cover; 
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;}
+  .box-5 { 
+    grid-area: box-5;
+    background-image: url(/assets/img/photo6.png);
+    background-repeat: no-repeat;
+    background-size:cover; 
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;}
+  .box-6 { 
+    grid-area: box-6; 
+    background-image: url(/assets/img/photo5.png);
+    background-repeat: no-repeat;
+    background-size:cover; 
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;}
+
+  /* text styling */
+  p{
+    font-size: .875rem;
+    color: #4E5150;
+  }
+
+  li span {
+    color: #4E5150;
+    font-size: .75rem;;
+  }
+
+
+ .secondary {
+    font-size: .625rem;
+    color: var(--clr-tertiary);
+  }
+
+  li .secondary {
+    color: #BDBDBD;
+  }
+
+  footer p {
+    font-size: .875rem;
+    color: #B9BDCF;
+    font-weight: var(--fw-medium);
+  }
+
+  footer a {
+    color:#B9BDCF;
+    font-weight: var(--fw-bold);
+  }
+
+  @media screen and (min-width: 48em) {
+    body {
+        margin: 3em 10em 1em 10em;
+    }
+
+    section:nth-child(2) {
+        gap: 1.125em 1.125em; 
+
+        margin-bottom: 7em;
+      }
+
+      footer {
+        margin-bottom: 2em;
+      }
+
+      section:first-child img {
+        width: 10.5em;
+      }
+
+      /* text styling */
+  p{
+    font-size: 1.5rem;
+    color: #4E5150;
+  }
+
+  li span {
+    color: #4E5150;
+    font-size: 1.125rem;;
+  }
+
+
+ .secondary {
+    font-size: .875rem;
+    color: var(--clr-tertiary);
+  }
+
+  li .secondary {
+    color: #BDBDBD;
+  }
+
+  footer p {
+    font-size: .875rem;
+    color: #B9BDCF;
+    font-weight: var(--fw-medium);
+  }
+
+  footer a {
+    color:#B9BDCF;
+    font-weight: var(--fw-bold);
+  }
+  }
